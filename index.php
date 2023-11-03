@@ -22,8 +22,8 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="logo">
-                    <a href="">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo">
+                    <a href="/">
+                        <img src="<?= get_theme_mod("ramify_logo"); ?>" alt="logo">
                     </a>
                 </div>
             </div>
