@@ -1,6 +1,21 @@
+/* Common CSS*/
+
 img{
     max-width: 100%;
+}
+body{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+h1, h2,h3,h4,h5,h6{
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.5rem;
+    font-weight: 600;
 }
 
 
 /* Header Area Working */
+#header_area .col-md-9 ul{
+    font-family: 'Oswald', sans-serif;
+}

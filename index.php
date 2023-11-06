@@ -31,26 +31,47 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <?php
+                    class Custom_Nav_Walker extends Walker_Nav_Menu {
+                        function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+                            $output .= '<li class="nav-item">';
+                            $output .= '<a class="nav-link" href="' . $item->url . '">';
+                            $output .= $item->title;
+                            $output .= '</a>';
+                        }
+                    }
+
+                    // In your template file, use the following code to display the menu
+                    wp_nav_menu(array(
+                        'theme_location' => 'main_menu',
+                        'container' => 'div',
+                        'container_class' => 'collapse navbar-collapse justify-content-end',
+                        'menu_class' => 'navbar-nav',
+                        'walker' => new Custom_Nav_Walker()
+                    ));
+
+                    ?>
+<!--                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">-->
+<!--                        <ul class="navbar-nav">-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="#">About</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="#">Portfolio</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="#">Contact</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
     </header>
+
 
 
     <?php wp_footer(); ?> <!-- wp_head and wp_footer kaj kore, wordpess core file load a -->
