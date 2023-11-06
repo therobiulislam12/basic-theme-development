@@ -20,12 +20,12 @@
 
 <body <?= body_class(); ?>>
 
-    <header id="header_area" class="py-3 navbar navbar-expand-lg bg-body-tertiary">
+    <header id="header_area" class="py-3 navbar navbar-expand-lg bg-body-tertiary <?= get_theme_mod("ramify_menu_position"); ?>">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-3 <?= get_theme_mod("ramify_menu_position"); ?>">
+                <div class="col-md-3 ">
                     <div class="logo">
-                        <a href="/theme-development/">
+                        <a href="<?= home_url(); ?>">
                             <img src="<?= get_theme_mod("ramify_logo"); ?>" alt="logo">
                         </a>
                     </div>
@@ -72,6 +72,15 @@
         </div>
     </header>
 
+    <main id="main-area" class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php the_content(); ?> <!--for see page content -->
+                </div>
+            </div>
+        </div>
+    </main>
 
 
     <?php wp_footer(); ?> <!-- wp_head and wp_footer kaj kore, wordpess core file load a -->
