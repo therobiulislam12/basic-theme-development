@@ -51,5 +51,28 @@ function ramify_customizar_register($wp_customize){
           'right_menu' => __('Right Menu', 'ramify')
        ]
     ]);
+
+
+    /**
+     * 
+     * Create footer area section
+     * 
+     */
+
+    $wp_customize->add_section('ramify_footer_area', [
+      'title' => __('Footer Area', 'ramify'),
+      'description' => 'Customize Your Footer Area'
+    ]);
+
+    $wp_customize->add_setting('ramify_copyright_text', [
+      'default' => 'Copyright © 2020 Ramify Digital | All Rights Reserved'
+    ]);
+
+    $wp_customize->add_control('ramify_copyright_text', [
+      'label'=> 'Change your copyright text',
+       'description'=> 'Make your theme what you want',
+       'section'=> 'ramify_footer_area',
+       'setting'=> 'ramify_copyright_text',
+    ]);
   };
   add_action('customize_register', 'ramify_customizar_register');
