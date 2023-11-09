@@ -10,10 +10,10 @@
 
                         the_post(); ?>
 
-                        <div class="blog_area bg-light-subtle p-4 rounded shadow my-2">
+                        <div class="blog_area bg-light-subtle p-4 rounded shadow my-4">
                             <?php if ( has_post_thumbnail() ) : ?>
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                    <?php the_post_thumbnail(); ?>
+                                    <?php echo the_post_thumbnail('post-thumbnails'); ?>
                                 </a>
                             <?php endif; ?>
                             <h2>
