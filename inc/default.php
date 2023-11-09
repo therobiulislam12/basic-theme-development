@@ -14,4 +14,4 @@
 
 
 // Add theme support for post thumbnails
-add_theme_support('post-thumbnails');
+add_theme_support('post-thumbnails', ['page', 'post']);
