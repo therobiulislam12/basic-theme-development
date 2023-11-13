@@ -59,7 +59,7 @@ function ramify_pagination(){
         foreach ($paginate_links as $link) {
             // Add Bootstrap classes to each link
             $link = str_replace('page-numbers', 'page-link', $link);
-            $link = str_replace('prev', 'page-item disabled', $link);
+            $link = str_replace('prev', 'page-item', $link);
             $link = str_replace('next', 'page-item', $link);
             $link = str_replace('current', 'page-item active', $link);
 
