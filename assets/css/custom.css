@@ -52,3 +52,31 @@ h1, h2,h3,h4,h5,h6{
     height: 350px;
     object-fit: cover;
 }
+
+
+
+/*=========================================
+    Sidebar tag area
+===========================================*/
+
+.child_widget .wp-block-tag-cloud a.tag-cloud-link {
+    text-decoration: none;
+    color: #fff;
+    background: #0D6EFD;
+    padding: 5px 10px;
+    margin: 3px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    font-size: 12px !important;
+}
+
+.child_widget .wp-block-tag-cloud a.tag-cloud-link:hover{
+    background: #262626;
+}
+
+
+/* Footer */
+
+footer.footer .child_widget p{
+    padding-right: 150px;
+}

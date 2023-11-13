@@ -1,7 +1,19 @@
+<?php 
 
+// This is footer template
+?>
 
-<footer class=" bg-black text-white py-3">
-    <div class="container">
+<footer class="footer bg-black text-white py-5">
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6"><?php dynamic_sidebar('footer-1');?></div>
+            <div class="col-md-3"><?php dynamic_sidebar('footer-2');?></div>
+            <div class="col-md-3"><?php dynamic_sidebar('footer-3');?></div>
+        </div>
+    </section>
+
+    <section class="container border-top pt-5">
         <div class="row">
             <div class="col-md-12">
                 <div class="copy-right-area text-center">
@@ -11,7 +23,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </footer>
 
 
