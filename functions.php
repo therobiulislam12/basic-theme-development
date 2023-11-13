@@ -21,3 +21,7 @@ include_once 'inc/theme-options.php';
 
 // Call Menu Registration Function
 include_once 'inc/menu-register.php';
+
+
+// Widgets Register
+include_once 'inc/widgets-register.php';
