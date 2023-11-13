@@ -74,5 +74,28 @@ function ramify_customizar_register($wp_customize){
        'section'=> 'ramify_footer_area',
        'setting'=> 'ramify_copyright_text',
     ]);
+
+    /**
+     * 
+     * Theme Options
+     * 
+     */
+
+     $wp_customize->add_section('ramify_theme_options', [
+      'title' => __('Ramify Theme Options', 'ramify'),
+      'description' => 'Customize Theme Options what you want', 
+      'priority' => 30
+    ]);
+
+    $wp_customize->add_setting('ramify_theme_post_excerpt_length', [
+      'default' => '40'
+    ]);
+
+    $wp_customize->add_control('ramify_theme_post_excerpt_length', [
+      'label'=> 'Post Excerpt Change',
+       'description'=> 'How long you want your post excerpt',
+       'section'=> 'ramify_theme_options',
+       'setting'=> 'ramify_theme_post_excerpt_length',
+    ]);
   };
   add_action('customize_register', 'ramify_customizar_register');

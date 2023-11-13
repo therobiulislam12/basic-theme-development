@@ -27,12 +27,12 @@ function ramify_excerpt_more($more)
 add_filter('excerpt_more', 'ramify_excerpt_more');
 
 
-function ramify_excerpt_length($length)
-{
+function ramify_excerpt_length($length) {
+    $custom = get_theme_mod( 'ramify_theme_post_excerpt_length' );
     if (is_admin()) {
         return $length;
     }
-    return 40;
+    return $custom;
 }
 
 add_filter('excerpt_length', 'ramify_excerpt_length', 999);
