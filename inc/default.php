@@ -36,3 +36,36 @@ function ramify_excerpt_length($length) {
 }
 
 add_filter('excerpt_length', 'ramify_excerpt_length', 999);
+
+
+// Enable Pagination 
+function ramify_pagination(){
+    global $wp_query;
+
+    $big = 999999999;
+    $paginate_links = paginate_links(array(
+        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+        'format' => '?paged=%#%',
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages,
+        'prev_text' => __('Previous', 'ramify'),
+        'next_text' => __('Next', 'ramify'),
+        'type' => 'array', // Return an array instead of HTML
+    ));
+
+    if ($paginate_links) {
+        echo '<nav aria-label="..." class="mt-5"><ul class="pagination">';
+        
+        foreach ($paginate_links as $link) {
+            // Add Bootstrap classes to each link
+            $link = str_replace('page-numbers', 'page-link', $link);
+            $link = str_replace('prev', 'page-item disabled', $link);
+            $link = str_replace('next', 'page-item', $link);
+            $link = str_replace('current', 'page-item active', $link);
+
+            echo '<li class="page-item">' . $link . '</li>';
+        }
+
+        echo '</ul></nav>';
+    }
+}

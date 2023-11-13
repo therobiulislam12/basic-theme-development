@@ -30,7 +30,18 @@
                     _e('No Post Found');
                 }
                 ?>
+
+                <div id="page_nav">
+                    <?php
+
+                    if ('ramify_pagination') {
+                        ramify_pagination();
+                    }
+                    ?>
+                </div>
             </div>
+
+
             <div class="col-md-3">
                 <h2>This is sidebar</h2>
             </div>
