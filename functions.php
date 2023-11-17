@@ -10,6 +10,9 @@
 include_once 'inc/default.php'; 
 
 
+// Adding Custom Post Type
+include_once 'inc/custom_post.php';
+
 // Enqueue Style and Script file
 include_once 'inc/enqueue.php';
 
