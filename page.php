@@ -1,6 +1,6 @@
 <?php
 
-// This template for pages
+// This template for displaying pages
 
 get_header();
 ?>

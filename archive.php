@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * The main template
+ * The template for archive page
+ * 
  */
-
 
 get_header(); ?>
 
@@ -11,7 +11,11 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-               
+                <div class="bg-warning-subtle p-4 rounded">
+                    <h2 class="mb-0">
+                        <?= the_archive_title(); ?>
+                    </h2>
+                </div>
                 <?php get_template_part('templates/blog_setup')?>
 
                 <div id="page_nav">
@@ -23,7 +27,6 @@ get_header(); ?>
                     ?>
                 </div>
             </div>
-
 
             <div class="col-md-3">
             <?php get_sidebar(); ?>

@@ -10,6 +10,10 @@ get_header();
         <div class="row">
             <div class="col-md-9">
                 <?php get_template_part('templates/post_setup') ?>
+
+                <div id="comment_area">
+                    <?php comment_form();  ?>
+                </div>
             </div>
 
 
